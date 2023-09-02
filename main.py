@@ -21,3 +21,5 @@ sl.title("FOOTPRINT")
 sl.button("Calculate Now")
 sl.subheader("Our Mission")
 sl.markdown("")
+
+sl.title("")
