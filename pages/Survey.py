@@ -49,8 +49,6 @@ q11 = sl.select_slider('How many appliances/utilities do you own that are energy
 #diet
 q12 = sl.selectbox('What sort of diet do you follow', ['None', 'vegan', 'vegetarian'])
 
-total = (0.004*q7)+2000/(q8+1)+q9/2*
-
 if q12 == "None":
     
     q13 = labels.index(sl.select_slider('How often do you eat red meat? (Beef, Pork, Lamb, etc)', options=labels))
@@ -82,7 +80,7 @@ q17 = sl.slider('How much waste do you produce a day? ',0, 30,format="%.0flbs") 
 
 q18 = labels.index(sl.select_slider('How often do you use one-use plastics?', options=labels))
 
-total += 0.315*q17*365+q18*0.1*365
+total += 0.315*q17*365+q18*0.03*182.5
 
 #shopping and consumption
 q19 = sl.slider('How much of the products you shop for are second-hand or sustainable products?',0, 100,format="%.0f%%")
