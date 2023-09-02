@@ -1,4 +1,8 @@
 import streamlit as sl
+sl.sidebar.title("Navigation")
+
+with open('style.css') as f:
+  sl.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 commital = sl.slider('How committed are you to emit less Carbon Emissions?', 0, 100)
 min_value2 = 0
