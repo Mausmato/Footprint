@@ -1,5 +1,6 @@
 import streamlit as sl
 
+
 commital = sl.slider('How committed are you to emit less Carbon Emissions?', 0, 100)
 min_value2 = 0
 max_value2 = 5000
