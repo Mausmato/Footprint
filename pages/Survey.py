@@ -20,7 +20,7 @@ q2 = sl.slider('How many kilometres do you drive on average a week', 0, 5000, fo
 
 q3 = car_type.index(sl.selectbox('What type of vehicle do you drive', car_type))
 
-q4 = sl.slider('How many hours do you fly in an airplane?', 0, 100, format = '%.0fhr')
+q4 = sl.slider('How many hours do you fly in an airplane a year?', 0, 100, format = '%.0fhr')
 
 q5 = sl.slider('How many kilometres do you drive using public transportation on average a week?', 0, 1000, format = '%.0fkm')
 
@@ -28,9 +28,9 @@ q6 = sl.slider('How many of your car rides are using a carpool or a ride-sharing
 
 total += ((q2/100) * vehicle_type[q3] * 2.3 * 52) / (4 * (q6/100))
 
-total += #for airplane calculate the co2 emmissions and then divide by amount of people in a plane
+total += 9 * q4
 
-total += #for public tranport calculate the emmissions and divide by amnt of people on the bus
+total += (q5/100) * 2 * 52
 
 #housing
 q7 = sl.slider('What is the square footage of your home', 0, 10000, format = '%.0fsq')
