@@ -3,13 +3,16 @@ sl.sidebar.title("Navigation")
 
 with open('style.css') as f:
   sl.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+  
+labels = ["Never", "Rarely", "Sometimes", "Often", "Always"]
+values = [1, 2, 3, 4, 5]
 
 
+commital = sl.slider('How committed are you to emit less Carbon Emissions?', 0, 100)
 
-commital = sl.select_slider('How committed are you to emit less Carbon Emissions?', options=())
+q2 = sl.slider('How many kilometres do you drive on average a week', 0, 5000, format = '%.0fkms')
 
-q2 = sl.slider('How many kilometres do you drive on average a week', 0, 5000, format = '%.0fkm')
-
+q21= sl.slider('How often do you buy new electronics per year?', )
 
 q22 = sl.slider('How many gallons of water do you use daily (in Liters)?',0, 1000,format="%.0fL")
 
