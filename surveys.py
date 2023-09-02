@@ -1,7 +1,11 @@
 import streamlit as sl
 
 commital = sl.slider('How committed are you to emit less Carbon Emissions?', 0, 100)
-q2 = sl.slider('How many kilometres do you drive on average a week', 0, 5000)
+min_value2 = 0
+max_value2 = 5000
+q2 = sl.slider('How many kilometres do you drive on average a week', min_value2, max_value2, format = '%.0fkms')
+sl.write(f'Min Value: {min_value2}kms')
+sl.write(f'Max Value: {max_value2}kms')
 q3 = input()
 q4 = input()
 q5 = input()
