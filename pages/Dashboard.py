@@ -4,17 +4,18 @@ sl.sidebar.image("assets/footprint.png")
 
 with open('style.css') as f:
   sl.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
-  
+
 # Title and header
 sl.title("CO2 Emissions Reduction Advisor")
 sl.header("Welcome to your personalized guide to lower annual CO2 emissions!")
 
-# Sidebar for user input
-sl.sidebar.header("User Input")
-Spend = sl.sidebar.number_input("How much money are you willing to spend anually to lower your CO2 emissions? (In $)", min_value = 0.0, step=10.0)
-
 # Carbon emissions reduction recommendations
 sl.subheader("CO2 Emissions Reduction Recommendations")
+
+# Sidebar for user input
+sl.subheader("User Input")
+Spend = sl.number_input("How much money are you willing to spend anually to lower your CO2 emissions? (In $)", min_value = 0.0, step=10.0)
+
 
 if Spend > 0:
     sl.write(f"Your current annual CO2 emissions:")
