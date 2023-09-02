@@ -1,7 +1,9 @@
 
-.css-19rxjzo .ef3psqc11{
-  margin: 0 auto;
+*{
+  background-color: #FAF4EA;
+  color: #292828;
 }
+
 
 .css-cio0dv.ea3mdgi1 {
   visibility: hidden;
@@ -10,4 +12,24 @@
 
 .css-czk5ss.e16jpq800 {
   visibility: hidden;
+}
+
+.css-19rxjzo{
+  border-color: #25995C;
+  background-color: #FAF4EA;
+}
+.css-19rxjzo:hover{
+  border-color: #25995C;
+  border-width: 3px;
+  transition-duration: 0.1s;
+  color: #25995C;
+  background-color: #25995C;
+}
+
+.css-19rxjzo:active{
+  border-color: #25995C;
+  border-width: 3px;
+  color: #25995C;
+  background-color: #25995C;
+  
 }
