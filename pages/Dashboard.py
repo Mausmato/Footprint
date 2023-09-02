@@ -2,7 +2,9 @@ import streamlit as sl
 sl.sidebar.title("Navigation")
 sl.sidebar.image("assets/footprint.png")
 
-
+with open('style.css') as f:
+  sl.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+  
 # Title and header
 sl.title("CO2 Emissions Reduction Advisor")
 sl.header("Welcome to your personalized guide to lower annual CO2 emissions!")
