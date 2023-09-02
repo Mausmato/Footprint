@@ -58,3 +58,4 @@ sl.bar_chart(g3data)
 
 
 sl.subheader("SUMMARY")
+sl.text("")
