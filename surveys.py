@@ -1,5 +1,7 @@
-commital = input()
-q2 = input()
+import streamlit as sl
+
+commital = sl.slider('How committed are you to emit less Carbon Emissions?', 0, 100)
+q2 = sl.slider('How many kilometres do you drive on average a week', 0, 5000)
 q3 = input()
 q4 = input()
 q5 = input()
