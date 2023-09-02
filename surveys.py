@@ -1,4 +1,6 @@
 commital = input()
+commital = sl.slider('How committed are you to emit less Carbon Emissions?', 0, 100)
+q2 = sl.slider('How many kilometres do you drive on average a week', 0, 5000)
 q2 = input()
 q3 = input()
 q4 = input()
