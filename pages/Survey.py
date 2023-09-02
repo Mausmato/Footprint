@@ -5,6 +5,7 @@ with open('style.css') as f:
   sl.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
   
 labels = ["Never", "Rarely", "Sometimes", "Often", "Always"]
+labels2 = ['Never', 'Rarely', 'Sometimes', 'Often', 'Very often']
 values = [1, 2, 3, 4, 5]
 
 
@@ -15,27 +16,43 @@ q2 = sl.slider('How many kilometres do you drive on average a week', 0, 5000, fo
 
 q3 = sl.selectbox('What type of vehicle do you drive', ['car', 'SUV', 'electric', 'semi', 'pickup'])
 
-q13 = sl.selectbox('What type of vehicle do you drive', ['None', 'vegan', 'vegetarian'])
+q4 = sl.slider('How many hours do you fly in an airplane?', 0, 100, format = '%.0fhr')
 
-q14 = labels.index(sl.select_slider('How often do you eat red meat? (Beef, Pork, Lamb, etc)', options=labels))
+q5 = sl.slider('How many kilometres do you drive using public transportation on average a week?', 0, 1000, format = '%.0fkm')
 
-q15 = labels.index(sl.select_slider('How often do you eat white meat? (Fish,Chicken,Turkey)', options=labels))
+q6 = sl.slider('How many of your car rides are using a carpool or a ride-sharing app?', 0, 100, format = '%.0f%%')
 
-q16 = labels.index(sl.select_slider('How often do you eat dairy products?', options=labels))
+q7 = sl.slider('What is the square footage of your home', 0, 50000, format = '%.0fsq')
 
-q17 = sl.slider('How much of the food you buy is locally produced',0, 100,format="%.0f%%")
+q8 = sl.radio('Do you use electric or gas heating and cooling systems:', ['gas', 'electric'])
 
-q18 = sl.slider('How much waste do you produce a day? ',0, 30,format="%.0flbs") #average is 5 lbs per person
+q9 = labels2.index(sl.select_slider('How often do you adjust your thermostat settings', options = labels2))
 
-q19 = labels.index(sl.select_slider('How often do you use one-use plastics?', options=labels))
+q10 = sl.radio('Have you implemented any renewable energy sources at home (e.g., solar panels)?', ['yes', 'no'])
 
-q20 = sl.slider('How much of the products you shop for are second-hand or sustainable products?',0, 100,format="%.0f%%")
+q11 = sl.select_slider('How many appliances/utilities do you own that are energy efficient (blue energy star sticker)?', options = ['None', 'A few', 'Many', 'Almost all', 'All'])
 
-q21 = labels.index(sl.select_slider('How often do you buy new clothes per year?', options=labels))
+q12 = sl.selectbox('What type of vehicle do you drive', ['None', 'vegan', 'vegetarian'])
 
-q22 = labels.index(sl.select_slider('How often do you buy new electronics per year?', options=labels))
+q13 = labels.index(sl.select_slider('How often do you eat red meat? (Beef, Pork, Lamb, etc)', options=labels))
 
-q23 = sl.slider('How many gallons of water do you use daily (in Liters)?',0, 1000,format="%.0fL") # average is 335 liters
+q14 = labels.index(sl.select_slider('How often do you eat white meat? (Fish,Chicken,Turkey)', options=labels))
+
+q15 = labels.index(sl.select_slider('How often do you eat dairy products?', options=labels))
+
+q16 = sl.slider('How much of the food you buy is locally produced',0, 100,format="%.0f%%")
+
+q17 = sl.slider('How much waste do you produce a day? ',0, 30,format="%.0flbs") #average is 5 lbs per person
+
+q18 = labels.index(sl.select_slider('How often do you use one-use plastics?', options=labels))
+
+q19 = sl.slider('How much of the products you shop for are second-hand or sustainable products?',0, 100,format="%.0f%%")
+
+q20 = labels.index(sl.select_slider('How often do you buy new clothes per year?', options=labels))
+
+q21 = labels.index(sl.select_slider('How often do you buy new electronics per year?', options=labels))
+
+q22 = sl.slider('How many gallons of water do you use daily (in Liters)?',0, 1000,format="%.0fL") # average is 335 liters
 
 commital = labels.index(sl.select_slider('Now that you are more educated, how committed are you to emit less Carbon Emissions?', options = labels))
 
