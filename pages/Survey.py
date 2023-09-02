@@ -101,9 +101,10 @@ q22 = sl.slider('How many gallons of water do you use daily (in Liters)?',0, 100
 
 commital = labels.index(sl.select_slider('Now that you are more educated, how committed are you to emit less Carbon Emissions?', options = labels))
 
-values1 = [0,5,10,15,20]
-values2 = [0,1,2,4,5]
+values21 = [0,5,10,15,20]
+values20 = [0,1,2,4,5]
+values19 = [0,5,10,15,20]
 
 
-#q20,21,22 
-total+= 90*values2[q20] + 20*values1[q21] + q22/1000*0.25*365
+#q19, 20,21,22 
+total+= 10*values19[q19]+90*values20[q20] + 20*values21[q21] + q22/1000*0.25*365
