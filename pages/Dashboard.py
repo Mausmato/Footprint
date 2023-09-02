@@ -7,7 +7,7 @@ with open('style.css') as f:
 
 # Title and header
 sl.title("CO2 Emissions Reduction Advisor")
-sl.header("Welcome to your personalized guide to lower annual CO2 emissions!")
+sl.header("Welcome to your personalized guide to lower your annual CO2 emissions!")
 
 # Carbon emissions reduction recommendations
 sl.subheader("CO2 Emissions Reduction Recommendations")
