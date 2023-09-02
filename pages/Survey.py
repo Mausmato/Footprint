@@ -1,6 +1,9 @@
 import streamlit as sl
 sl.sidebar.title("Navigation")
 
+sl.title("Welcome to the Survey.")
+sl.subheader("This is our curated survey to help you keep track of your carbon footprint.")
+
 with open('style.css') as f:
   sl.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
   
@@ -115,4 +118,4 @@ values19 = [0,5,10,15,20]
 total+= 10*values19[q19]+90*values20[q20] + 20*values21[q21] + q22/1000*0.25*365
 
 total = round(total/1000, 2)
-sl.write(total)  #in tonnes of co2 per year
+sl.write("Your total carbon emissions for a year would be "+str(total)+" tons.")  #in tonnes of co2 per year
