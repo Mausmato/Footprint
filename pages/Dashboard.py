@@ -79,11 +79,54 @@ sl.write("Explore more carbon reduction strategies to help you lower your annual
 
 #Strategies for from results of the survey such as alot of red meat, not sustainable energy, etc. Show like 5 from this list relevant to user result.
 strategies = {
-    "1. Energy Efficiency": "Learn how to make your home more energy-efficient.",
-    "2. Sustainable Transportation": "Discover eco-friendly transportation options.",
-    "3. Sustainable Diet": "Find tips on reducing your carbon footprint through your diet.",
-    "4. Eco-friendly Travel": "Explore eco-conscious travel practices and destinations.",
-    "5. Carbon Offsetting": "Learn about carbon offsetting and its impact.",
+        recommendations1 = [
+        "Reduce energy consumption by improving home insulation and using energy-efficient appliances.",
+        "Use public transportation, carpool, or switch to an electric vehicle to reduce transportation emissions.",
+        "Reduce meat consumption and incorporate more plant-based foods into your diet.",
+        "Limit air travel and choose eco-friendly travel options when possible.",
+        "Participate in local environmental initiatives and support renewable energy sources.",
+        "Plant trees or participate in reforestation efforts to offset carbon emissions.",
+    ]
+    recommendations2 = [
+        
+    ]
+    recommendations3 = [
+        
+    ]
+    recommendations4 = [
+        
+    ]
+    recommendations5 = [
+        
+    ]
+
+    sl.write("Personalized recommendations:")
+    for suggestion in recommendations1:
+        sl.write(f"- {suggestion}")
+
+# Explore carbon reduction strategies
+sl.subheader("Explore Carbon Reduction Strategies")
+
+sl.write("Explore more carbon reduction strategies to help you lower your annual CO2 emissions:")
+
+#Strategies for from results of the survey such as alot of red meat, not sustainable energy, etc. Show like 5 from this list relevant to user result.
+strategies = {
+    "Energy Efficiency": "Learn how to make your home more energy-efficient.",
+    "Sustainable Transportation": "Discover eco-friendly transportation options.",
+    "Sustainable Diet": "Find tips on reducing your carbon footprint through your diet.",
+    "Eco-friendly Travel": "Explore eco-conscious travel practices and destinations.",
+    "Carbon Offsetting": "Learn about carbon offsetting and its impact.",
+    "Renewable Items": "Try utilizing reuseable items like waterbottles and containters.",
+    "Car Tuning": "Keeping your car in tune can help save gas and electricity.",
+    "Close the Windows": "When your air conditioner is running, close the windows to save energy.",
+    "Composting": "Compost food items to reduce kitchen-waste.",
+    "Plant Trees": "Plant trees to help absorb CO2 and produce oxygen.",
+    "Smart Home": "Using a smart thermostat can help optimize cooling and heating.",
+    "Share Resources": "Borrow and share items with neighbors and friends to reduce consumption.",
+    "Appliance Optimizing": "Skip the dryer and air dry clothes to save energy.",
+    "Upcycling": "Repair or reuse items to save things from going to waste.",
+    "Rain-Barrels": "Utilize rain barrels to catch and store spare water.",
+    "Renewable Energy": "Use things like solar power to produce energy."  
 }
 
 selected_strategy = sl.selectbox("Select a carbon reduction strategy to learn more about!:", list(strategies.keys()))
