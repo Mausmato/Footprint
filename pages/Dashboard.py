@@ -1,8 +1,7 @@
 import streamlit as sl
 sl.sidebar.title("Navigation")
-  
-#Feedback API Supposed to show after they finish survey
-# app.py
+sl.sidebar.image("assets/footprint.png")
+
 
 # Title and header
 sl.title("CO2 Emissions Reduction Advisor")
