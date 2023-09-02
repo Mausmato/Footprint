@@ -1,5 +1,5 @@
 import streamlit as sl
-import survey
+import Survey
 
 sl.sidebar.title("Navigation")
 sl.sidebar.image("assets/footprint.png")
@@ -49,7 +49,7 @@ if Spend > 0:
         "Be more involved with the community and donating",
         "Eco-Friendly Home Cleaning Products are more expensive but well worth it to emit less CO2",
         "Schedule a professonal energy audit to find ways to strengthen energy efficiency",
-        "Public Transportation Passes. Public transport=good"
+        "Public Transportation Passes. Public transport=good",
     ]
 #200-500 dollars
     recommendations4 = [
