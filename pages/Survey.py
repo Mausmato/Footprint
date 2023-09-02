@@ -13,6 +13,8 @@ commital = labels.index(sl.select_slider('How committed are you to emit less Car
 
 q2 = sl.slider('How many kilometres do you drive on average a week', 0, 5000, format = '%.0fkm')
 
+q3 = sl.selectbox('What type of vehicle do you drive', ['car', 'SUV', 'electric', 'semi', 'pickup'])
+
 q21= labels.index(sl.select_slider('How often do you buy new electronics per year?', options=labels))
 
 q22 = sl.slider('How many gallons of water do you use daily (in Liters)?',0, 1000,format="%.0fL")
