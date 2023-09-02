@@ -128,4 +128,4 @@ sl.write("Your total carbon emissions for a year would be "+str(total)+" tons.")
 amt_of_trees = math.ceil(total/0.025)
 sl.write('To offset your carbon emissions you would need: '+str(amt_of_trees)+' trees')
 
-sl.markdown('<a href="/Dashboard" target="_self">CLICK HERE to learn more about how YOU can reduce your carbon footprint</a>', unsafe_allow_html=True)
+sl.markdown('<a href="/Dashboard" target="_self">**CLICK HERE to learn more about how YOU can reduce your carbon footprint**</a>', unsafe_allow_html=True)
