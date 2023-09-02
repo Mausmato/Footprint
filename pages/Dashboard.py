@@ -65,6 +65,3 @@ selected_strategy = sl.selectbox("Select a carbon reduction strategy to learn mo
 
 if selected_strategy:
     sl.write(f"**{selected_strategy}**: {strategies[selected_strategy]}")
-
-# Footer
-sl.sidebar.markdown("Created for [RhythmHacks]")
