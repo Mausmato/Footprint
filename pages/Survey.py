@@ -53,6 +53,8 @@ elif q8 == 'gas':
 elif q8 == 'I do not know':
   total += ((2.47 * q7 * 0.3712 + 0.954 * q7 * 1.9)/2) * q9/2
 
+total += q11 * 100 + 500
+
 #diet
 q12 = sl.selectbox('What sort of diet do you follow', ['None', 'vegan', 'vegetarian'])
 
