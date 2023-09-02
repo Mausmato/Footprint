@@ -15,6 +15,7 @@ def open_page(url):
         </script>
     """ % (url)
     html(open_script)
+    
 
 sl.button('**CALCULATE NOW**', on_click=open_page, args=('http://localhost:8506/Survey',))
 sl.markdown("Click here to track your **FOOTPRINT** with our curated survey.")
