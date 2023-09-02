@@ -27,3 +27,12 @@ q20 = input()
 q21 = input()
 q22 = input()
 commital = input()
+
+min_value22=0
+max_value22=1000
+q22 = sl.slider('How many gallons of water do you use daily (in Liters)?',min_value=min_value22, max_value=max_value22, value=(min_value22, max_value22),format="%.0fL")
+sl.write(f'Min Value: {min_value22}L')
+sl.write(f'Max Value: {max_value22}L')
+commital = input()
+
+q22_calc = q22/1000*0.25*365
