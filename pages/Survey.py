@@ -7,15 +7,18 @@ with open('style.css') as f:
 labels = ["Never", "Rarely", "Sometimes", "Often", "Always"]
 labels2 = ['Never', 'Rarely', 'Sometimes', 'Often', 'Very often']
 values = [1, 2, 3, 4, 5]
+vehicle_type = [10, 12, 40, 12, 0]
+car_type = ['car', 'SUV', 'semi', 'pickup', 'electric']
 
 
 commital = labels.index(sl.select_slider('How committed are you to emit less Carbon Emissions?', options = labels))
 
-total_co2 = 0
+total = 0
+
 #transportation
 q2 = sl.slider('How many kilometres do you drive on average a week', 0, 5000, format = '%.0fkm')
 
-q3 = sl.selectbox('What type of vehicle do you drive', ['car', 'SUV', 'electric', 'semi', 'pickup'])
+q3 = car_type.index(sl.selectbox('What type of vehicle do you drive', car_type))
 
 q4 = sl.slider('How many hours do you fly in an airplane?', 0, 100, format = '%.0fhr')
 
@@ -23,7 +26,11 @@ q5 = sl.slider('How many kilometres do you drive using public transportation on 
 
 q6 = sl.slider('How many of your car rides are using a carpool or a ride-sharing app?', 0, 100, format = '%.0f%%')
 
+total += ((q2/100) * vehicle_type[q3] * 2.3 * 52) / (4 * (q6/100))
 
+total += #for airplane calculate the co2 emmissions and then divide by amount of people in a plane
+
+total += #for public tranport calculate the emmissions and divide by amnt of people on the bus
 
 #housing
 q7 = sl.slider('What is the square footage of your home', 0, 10000, format = '%.0fsq')
@@ -67,7 +74,6 @@ commital = labels.index(sl.select_slider('Now that you are more educated, how co
 values1 = [0,5,10,15,20]
 values2 = [0,1,2,4,5]
 
-total = 0
 
 #q20,21,22 
 total+= 90*values2[q20] + 20*values1[q21] + q22/1000*0.25*365
