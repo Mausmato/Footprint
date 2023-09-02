@@ -55,4 +55,4 @@ g3data = pd.DataFrame(g3data)
 g3data = g3data.set_index("Location")
 sl.bar_chart(g3data)
 
-sl.subheader("Summary")
+sl.subheader("SUMMARY")
