@@ -13,9 +13,13 @@ commital = labels.index(sl.select_slider('How committed are you to emit less Car
 
 q2 = sl.slider('How many kilometres do you drive on average a week', 0, 5000, format = '%.0fkm')
 
-q21= labels.index(sl.select_slider('How often do you buy new electronics per year?', options=labels))
+q20 = sl.slider('How much of the products you shop for are second-hand or sustainable products??',0, 100,format="%.0f%")
 
-q22 = sl.slider('How many gallons of water do you use daily (in Liters)?',0, 1000,format="%.0fL")
+q21 = labels.index(sl.select_slider('How often do you buy new clothes per year?', options=labels))
+
+q22 = labels.index(sl.select_slider('How often do you buy new electronics per year?', options=labels))
+
+q23 = sl.slider('How many gallons of water do you use daily (in Liters)?',0, 1000,format="%.0fL")
 
 
-q22_calc = q22/1000*0.25*365
+q23_calc = q22/1000*0.25*365
