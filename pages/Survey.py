@@ -6,12 +6,12 @@ with open('style.css') as f:
   
 labels = ["Never", "Rarely", "Sometimes", "Often", "Always"]
 labels2 = ['Never', 'Rarely', 'Sometimes', 'Often', 'Very often']
+labels3 = ['None', 'A few', 'Many', 'Almost all', 'All']
 values = [1, 2, 3, 4, 5]
 vehicle_type = [10, 12, 40, 12, 0]
 car_type = ['car', 'SUV', 'semi', 'pickup', 'electric']
 
-
-commital = labels.index(sl.select_slider('How committed are you to emit less Carbon Emissions?', options = labels))
+commital = sl.slider('How committed are you to emit less Carbon Emissions? (on a scale of 1-10)', 1, 10)
 
 total = 0
 
@@ -38,13 +38,20 @@ total += (q5/100) * 2 * 52
 #housing
 q7 = sl.slider('What is the square footage of your home', 0, 10000, format = '%.0fsq')
 
-q8 = sl.radio('Do you use electric or gas heating and cooling systems:', ['gas', 'electric'])
+q8 = sl.radio('Do you use electric or gas heating and cooling systems:', ['gas', 'electric', 'I do not know'])
 
 q9 = labels2.index(sl.select_slider('How often do you adjust your thermostat settings', options = labels2))
 
 q10 = sl.radio('Have you implemented any renewable energy sources at home (e.g., solar panels)?', ['yes', 'no'])
 
-q11 = sl.select_slider('How many appliances/utilities do you own that are energy efficient (blue energy star sticker)?', options = ['None', 'A few', 'Many', 'Almost all', 'All'])
+q11 = labels3.index(sl.select_slider('How many appliances/utilities do you own that are energy efficient (blue energy star sticker)?', options = labels3))
+
+if q8 == 'electric':
+ total += (2.47 * q7 * 0.3712) * q9/2
+elif q8 == 'gas':
+  total += (0.954 * q7 * 1.9) * q9/2
+elif q8 == 'I do not know':
+  total += ((2.47 * q7 * 0.3712 + 0.954 * q7 * 1.9)/2) * q9/2
 
 #diet
 q12 = sl.selectbox('What sort of diet do you follow', ['None', 'vegan', 'vegetarian'])
