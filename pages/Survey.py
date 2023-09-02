@@ -11,7 +11,7 @@ values = [1, 2, 3, 4, 5]
 
 commital = labels.index(sl.select_slider('How committed are you to emit less Carbon Emissions?', options = labels))
 
-
+#transportation
 q2 = sl.slider('How many kilometres do you drive on average a week', 0, 5000, format = '%.0fkm')
 
 q3 = sl.selectbox('What type of vehicle do you drive', ['car', 'SUV', 'electric', 'semi', 'pickup'])
@@ -22,6 +22,8 @@ q5 = sl.slider('How many kilometres do you drive using public transportation on 
 
 q6 = sl.slider('How many of your car rides are using a carpool or a ride-sharing app?', 0, 100, format = '%.0f%%')
 
+
+#housing
 q7 = sl.slider('What is the square footage of your home', 0, 50000, format = '%.0fsq')
 
 q8 = sl.radio('Do you use electric or gas heating and cooling systems:', ['gas', 'electric'])
@@ -32,7 +34,7 @@ q10 = sl.radio('Have you implemented any renewable energy sources at home (e.g.,
 
 q11 = sl.select_slider('How many appliances/utilities do you own that are energy efficient (blue energy star sticker)?', options = ['None', 'A few', 'Many', 'Almost all', 'All'])
 
-q12 = sl.selectbox('What type of vehicle do you drive', ['None', 'vegan', 'vegetarian'])
+q12 = sl.selectbox('What sort of diet do you follow', ['None', 'vegan', 'vegetarian'])
 
 q13 = labels.index(sl.select_slider('How often do you eat red meat? (Beef, Pork, Lamb, etc)', options=labels))
 
