@@ -16,8 +16,8 @@ annual_carbon_emissions = sl.sidebar.number_input("How much money are you willin
 sl.subheader("CO2 Emissions Reduction Recommendations")
 
 if annual_carbon_emissions > 0:
-    sl.write(f"Your current annual CO2 emissions: {annual_carbon_emissions:.2f} metric tons.")
-    sl.write("Here are some personalized recommendations to lower your carbon footprint:")
+    sl.write(f"Your current annual CO2 emissions:")
+    sl.write("Here are some recommendations to lower your carbon footprint made for you and your preferences and behaviors shown in the survey:")
 
     recommendations = [
         "Reduce energy consumption by improving home insulation and using energy-efficient appliances.",
@@ -28,7 +28,7 @@ if annual_carbon_emissions > 0:
         "Plant trees or participate in reforestation efforts to offset carbon emissions.",
     ]
 
-    sl.write("Here are some personalized recommendations to lower your carbon footprint:")
+    sl.write("Personalized recommendations:")
     for suggestion in recommendations:
         sl.write(f"- {suggestion}")
 
@@ -45,7 +45,7 @@ strategies = {
     "5. Carbon Offsetting": "Learn about carbon offsetting and its impact.",
 }
 
-selected_strategy = sl.selectbox("Select a carbon reduction strategy:", list(strategies.keys()))
+selected_strategy = sl.selectbox("Select a carbon reduction strategy to learn more about!:", list(strategies.keys()))
 
 if selected_strategy:
     sl.write(f"**{selected_strategy}**: {strategies[selected_strategy]}")
