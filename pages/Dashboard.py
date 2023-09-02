@@ -1,61 +1,54 @@
 import streamlit as sl
 sl.sidebar.title("Navigation")
-
-with open('style.css') as f:
-  sl.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
   
-#Feedback API
-
-import streamlit as st
+#Feedback API Supposed to show after they finish survey
+# app.py
 
 # Title and header
-st.title("Money Saving Advisor")
-st.header("Welcome to your personalized money-saving guide!")
+sl.title("CO2 Emissions Reduction Advisor")
+sl.header("Welcome to your personalized guide to lower annual CO2 emissions!")
 
 # Sidebar for user input
-st.sidebar.header("User Input")
-money_to_save = st.sidebar.number_input("How much money can you save per month?", min_value=0.01, step=10.0)
+sl.sidebar.header("User Input")
+annual_carbon_emissions = sl.sidebar.number_input("How much money are you willing to spend anually to lower your CO2 emissions? (In $)", min_value = 0.0, step=10.0)
 
-# Money-saving suggestions
-st.subheader("Money-Saving Suggestions")
+# Carbon emissions reduction recommendations
+sl.subheader("CO2 Emissions Reduction Recommendations")
 
-if money_to_save > 0:
-    st.write(f"You can save ${money_to_save:.2f} per month.")
-    st.write("Here are some personalized money-saving suggestions:")
+if annual_carbon_emissions > 0:
+    sl.write(f"Your current annual CO2 emissions: {annual_carbon_emissions:.2f} metric tons.")
+    sl.write("Here are some personalized recommendations to lower your carbon footprint:")
 
-    suggestions = [
-        "Create a budget and track your expenses to identify areas where you can cut costs.",
-        "Consider automating your savings by setting up automatic transfers to a savings account.",
-        "Reduce discretionary spending on non-essential items and focus on needs vs. wants.",
-        "Shop for groceries in bulk and take advantage of discounts and coupons.",
-        "Explore opportunities to reduce utility bills by improving energy efficiency at home.",
-        "Invest in a retirement account like a 401(k) or IRA for long-term savings.",
+    recommendations = [
+        "Reduce energy consumption by improving home insulation and using energy-efficient appliances.",
+        "Use public transportation, carpool, or switch to an electric vehicle to reduce transportation emissions.",
+        "Reduce meat consumption and incorporate more plant-based foods into your diet.",
+        "Limit air travel and choose eco-friendly travel options when possible.",
+        "Participate in local environmental initiatives and support renewable energy sources.",
+        "Plant trees or participate in reforestation efforts to offset carbon emissions.",
     ]
 
-    st.write("Here are some personalized money-saving suggestions:")
-    for suggestion in suggestions:
-        st.write(f"- {suggestion}")
+    sl.write("Here are some personalized recommendations to lower your carbon footprint:")
+    for suggestion in recommendations:
+        sl.write(f"- {suggestion}")
 
-# Financial resources and tips
-st.subheader("Financial Resources and Tips")
+# Explore carbon reduction strategies
+sl.subheader("Explore Carbon Reduction Strategies")
 
-st.write("Explore more financial resources and tips to help you save money:")
+sl.write("Explore more carbon reduction strategies to help you lower your annual CO2 emissions:")
 
-resources = {
-    "1. Personal Finance Basics": "Learn the fundamentals of personal finance.",
-    "2. Investment Strategies": "Discover different investment options and strategies.",
-    "3. Debt Management": "Find ways to manage and reduce your debt effectively.",
-    "4. Financial Planning Tools": "Access tools to help you create a financial plan.",
-    "5. Savings Calculators": "Calculate your savings goals and timelines.",
+strategies = {
+    "1. Energy Efficiency": "Learn how to make your home more energy-efficient.",
+    "2. Sustainable Transportation": "Discover eco-friendly transportation options.",
+    "3. Sustainable Diet": "Find tips on reducing your carbon footprint through your diet.",
+    "4. Eco-friendly Travel": "Explore eco-conscious travel practices and destinations.",
+    "5. Carbon Offsetting": "Learn about carbon offsetting and its impact.",
 }
 
-selected_resource = st.selectbox("Select a financial resource:", list(resources.keys()))
+selected_strategy = sl.selectbox("Select a carbon reduction strategy:", list(strategies.keys()))
 
-if selected_resource:
-    st.write(f"**{selected_resource}**: {resources[selected_resource]}")
+if selected_strategy:
+    sl.write(f"**{selected_strategy}**: {strategies[selected_strategy]}")
 
 # Footer
-st.sidebar.markdown("Created by [Your Name]")
-
-  
-  
+sl.sidebar.markdown("Created for [RhythmHacks]")
