@@ -2,13 +2,14 @@ import streamlit as sl
 import math
 
 sl.sidebar.title("Navigation")
+sl.sidebar.image("assets/footprint.png")
 
 sl.title("Welcome to the Survey.")
 sl.subheader("This is our curated survey to help you keep track of your carbon footprint.")
 
 with open('style.css') as f:
   sl.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
-  
+
 labels = ["Never", "Rarely", "Sometimes", "Often", "Always"]
 labels2 = ['Never', 'Rarely', 'Sometimes', 'Often', 'Very often']
 labels3 = ['None', 'A few', 'Many', 'Almost all', 'All']
@@ -19,6 +20,9 @@ car_type = ['car', 'SUV', 'semi', 'pickup', 'electric']
 commital = sl.slider('How committed are you to emit less Carbon Emissions? (on a scale of 1-10)', 1, 10)
 
 total = 0
+
+
+
 
 #transportation
 q2 = sl.slider('How many kilometres do you drive on average a week', 0, 5000, format = '%.0fkm')
