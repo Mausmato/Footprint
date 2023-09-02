@@ -22,6 +22,7 @@
 .css-19rxjzo{
   border-color: #25995C;
   background-color: #FAF4EA;
+  transition-duration: 0.3s;
 
 }
 .css-19rxjzo:hover{
@@ -84,4 +85,17 @@
 
 .css-15zrgzn.e1nzilvr3:action{
   visibility: hidden;
+}
+
+.css-19rxjzo.ef3psqc11{
+  width: 50%;
+  height: 68px;
+}
+
+.css-x78sv8.e1nzilvr5{
+  font-size: 100px;
+}
+
+.css-nahz7x.e1nzilvr5 {
+  text-align: center;
 }
