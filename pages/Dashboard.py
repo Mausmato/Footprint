@@ -10,16 +10,17 @@ sl.header("Welcome to your personalized guide to lower annual CO2 emissions!")
 
 # Sidebar for user input
 sl.sidebar.header("User Input")
-annual_carbon_emissions = sl.sidebar.number_input("How much money are you willing to spend anually to lower your CO2 emissions? (In $)", min_value = 0.0, step=10.0)
+Spend = sl.sidebar.number_input("How much money are you willing to spend anually to lower your CO2 emissions? (In $)", min_value = 0.0, step=10.0)
 
 # Carbon emissions reduction recommendations
 sl.subheader("CO2 Emissions Reduction Recommendations")
 
-if annual_carbon_emissions > 0:
+if Spend > 0:
     sl.write(f"Your current annual CO2 emissions:")
-    sl.write("Here are some recommendations to lower your carbon footprint made for you and your preferences and behaviors shown in the survey:")
+    sl.write("Here are some recommendations to lower your carbon footprint made for you using the money you are willing to spend:")
 
-    recommendations = [
+#Recommendations for different amount of money they willing to spend
+    recommendations1 = [
         "Reduce energy consumption by improving home insulation and using energy-efficient appliances.",
         "Use public transportation, carpool, or switch to an electric vehicle to reduce transportation emissions.",
         "Reduce meat consumption and incorporate more plant-based foods into your diet.",
@@ -27,9 +28,21 @@ if annual_carbon_emissions > 0:
         "Participate in local environmental initiatives and support renewable energy sources.",
         "Plant trees or participate in reforestation efforts to offset carbon emissions.",
     ]
+    recommendations2 = [
+        
+    ]
+    recommendations3 = [
+        
+    ]
+    recommendations4 = [
+        
+    ]
+    recommendations5 = [
+        
+    ]
 
     sl.write("Personalized recommendations:")
-    for suggestion in recommendations:
+    for suggestion in recommendations1:
         sl.write(f"- {suggestion}")
 
 # Explore carbon reduction strategies
@@ -37,6 +50,7 @@ sl.subheader("Explore Carbon Reduction Strategies")
 
 sl.write("Explore more carbon reduction strategies to help you lower your annual CO2 emissions:")
 
+#Strategies for from results of the survey such as alot of red meat, not sustainable energy, etc. Show like 5 from this list relevant to user result.
 strategies = {
     "1. Energy Efficiency": "Learn how to make your home more energy-efficient.",
     "2. Sustainable Transportation": "Discover eco-friendly transportation options.",
