@@ -55,6 +55,9 @@ elif q8 == 'I do not know':
 
 total += q11 * 100 + 500
 
+if q10 == 'yes':
+   total -= 557
+
 #diet
 q12 = sl.selectbox('What sort of diet do you follow', ['None', 'vegan', 'vegetarian'])
 
@@ -92,7 +95,7 @@ q18 = labels.index(sl.select_slider('How often do you use one-use plastics?', op
 total += 0.315*q17*365+q18*0.03*182.5
 
 #shopping and consumption
-q19 = sl.slider('How much of the products you shop for are second-hand or sustainable products?',0, 100,format="%.0f%%")
+q19 = labels3.index(sl.select_slider('How much of the products you shop for are second-hand or sustainable products?', options = labels3))
 
 q20 = labels.index(sl.select_slider('How often do you buy new clothes per year?', options=labels))
 
@@ -101,7 +104,7 @@ q21 = labels.index(sl.select_slider('How often do you buy new electronics per ye
 #water usage
 q22 = sl.slider('How many gallons of water do you use daily (in Liters)?',0, 1000,format="%.0fL") # average is 335 liters
 
-commital = labels.index(sl.select_slider('Now that you are more educated, how committed are you to emit less Carbon Emissions?', options = labels))
+commital = sl.slider('Now that you are more educated, how committed are you to emit less Carbon Emissions? (on a scale of 1-10)', 1, 10)
 
 values21 = [0,5,10,15,20]
 values20 = [0,1,2,4,5]
@@ -110,3 +113,6 @@ values19 = [0,5,10,15,20]
 
 #q19, 20,21,22 
 total+= 10*values19[q19]+90*values20[q20] + 20*values21[q21] + q22/1000*0.25*365
+
+total = round(total/1000, 2)
+sl.write(total)  #in tonnes of co2 per year
