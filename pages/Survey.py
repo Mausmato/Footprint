@@ -121,5 +121,5 @@ total+= 10*values19[q19]+90*values20[q20] + 20*values21[q21] + q22/1000*0.25*365
 
 total = round(total/1000, 2)
 sl.write("Your total carbon emissions for a year would be "+str(total)+" tons.")  #in tonnes of co2 per year
-amt_of_trees = math.roof(total/0.025)
-sl.write('To offset your carbon emissions you would need:'+str(amt_of_trees)+'trees')
+amt_of_trees = math.ceil(total/0.025)
+sl.write('To offset your carbon emissions you would need: '+str(amt_of_trees)+' trees')
