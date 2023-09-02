@@ -14,8 +14,8 @@ labels = ["Never", "Rarely", "Sometimes", "Often", "Always"]
 labels2 = ['Never', 'Rarely', 'Sometimes', 'Often', 'Very often']
 labels3 = ['None', 'A few', 'Many', 'Almost all', 'All']
 values = [1, 2, 3, 4, 5]
-vehicle_type = [10, 12, 40, 12, 0]
-car_type = ['car', 'SUV', 'semi', 'pickup', 'electric']
+vehicle_type = [10, 12, 40, 12, 0, 0]
+car_type = ['car', 'SUV', 'semi', 'pickup', 'electric', 'none']
 
 commital = sl.slider('How committed are you to emit less Carbon Emissions? (on a scale of 1-10)', 1, 10)
 
@@ -27,13 +27,13 @@ total = 0
 #transportation
 q2 = sl.slider('How many kilometres do you drive on average a week', 0, 5000, format = '%.0fkm')
 
-q3 = car_type.index(sl.selectbox('What type of vehicle do you drive', car_type))
+q3 = car_type.index(sl.radio('What type of vehicle do you drive', car_type))
 
 q4 = sl.slider('How many hours do you fly in an airplane a year?', 0, 100, format = '%.0fhr')
 
-q5 = sl.slider('How many kilometres do you travel using public transportation on average a week?', 0, 1000, format = '%.0fkm')
+q5 = sl.slider('How many kilometres do you drive using public transportation on average a week?', 0, 1000, format = '%.0fkm')
 
-q6 = sl.slider('How many of your car rides involve carpooling or ride-sharing?', 0, 100, format = '%.0f%%')
+q6 = sl.slider('How many of your car rides are using a carpool or a ride-sharing app?', 0, 100, format = '%.0f%%')
 
 if q6 > 0:
     total += ((q2/100) * vehicle_type[q3] * 2.3 * 52) / (4 * (q6/100))
@@ -68,7 +68,7 @@ if q10 == 'yes':
    total -= 557
 
 #diet
-q12 = sl.selectbox('What sort of diet do you follow', ['None', 'vegan', 'vegetarian'])
+q12 = sl.radio('What sort of diet do you follow', ['None', 'vegan', 'vegetarian'])
 
 if q12 == "None":
     
@@ -128,4 +128,4 @@ sl.write("Your total carbon emissions for a year would be "+str(total)+" tons.")
 amt_of_trees = math.ceil(total/0.025)
 sl.write('To offset your carbon emissions you would need: '+str(amt_of_trees)+' trees')
 
-sl.markdown('<a href="/Dashboard" target="_self">**CLICK HERE to learn more about how YOU can reduce your carbon footprint**</a>', unsafe_allow_html=True)
+sl.markdown('<a href="/Dashboard" target="_self">CLICK HERE to learn more about how YOU can reduce your carbon footprint</a>', unsafe_allow_html=True)
