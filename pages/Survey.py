@@ -27,7 +27,7 @@ total = 0
 #transportation
 q2 = sl.slider('How many kilometres do you drive on average a week', 0, 5000, format = '%.0fkm')
 
-q3 = car_type.index(sl.selectbox('What type of vehicle do you drive', car_type))
+q3 = sl.selectbox('What type of vehicle do you drive', car_type)
 
 q4 = sl.slider('How many hours do you fly in an airplane a year?', 0, 100, format = '%.0fhr')
 

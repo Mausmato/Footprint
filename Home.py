@@ -9,7 +9,6 @@ sl.sidebar.image("assets/footprint.png")
 with open('style.css') as f:
   sl.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
   
-sl.markdown('<a href="/Survey" target="_self">Survey</a>', unsafe_allow_html=True)
 sl.title("Hello, welcome to FOOTPRINT.")
 def open_page(url):
     open_script= """
@@ -20,6 +19,7 @@ def open_page(url):
     html(open_script)
     
 
+sl.markdown('<a href="/Survey" target="_self">CALCULATE NOW</a>', unsafe_allow_html=True)
 sl.button('**CALCULATE NOW**', on_click=open_page, args=('http://localhost:8502/Survey',))
 sl.markdown("Click here to track your **FOOTPRINT** with our curated survey.")
 sl.subheader("Our Mission")
