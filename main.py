@@ -9,4 +9,5 @@ sl.text("Click here to track your FOOTPRINT")
 sl.subheader("Our Mission")
 sl.markdown("Here at **FOOTPRINT** we strive to make an eco-friendly environment that is both accessible and practical. ")
 
+sl.sidebar.title("Navigation")
 
