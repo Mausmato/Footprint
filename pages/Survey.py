@@ -26,7 +26,7 @@ q6 = sl.slider('How many of your car rides are using a carpool or a ride-sharing
 
 
 #housing
-q7 = sl.slider('What is the square footage of your home', 0, 50000, format = '%.0fsq')
+q7 = sl.slider('What is the square footage of your home', 0, 10000, format = '%.0fsq')
 
 q8 = sl.radio('Do you use electric or gas heating and cooling systems:', ['gas', 'electric'])
 
