@@ -1,7 +1,10 @@
 
 *{
-  background-color: #FAF4EA;
   color: #292828;
+}
+
+.main.css-uf99v8.ea3mdgi5{
+  background: #FAF4EA;
 }
 
 
@@ -17,19 +20,17 @@
 .css-19rxjzo{
   border-color: #25995C;
   background-color: #FAF4EA;
+
 }
 .css-19rxjzo:hover{
   border-color: #25995C;
   border-width: 3px;
   transition-duration: 0.1s;
-  color: #25995C;
  
 }
 
 .css-19rxjzo:active{
   border-color: #25995C;
   border-width: 3px;
-  color: #25995C;
-  background-color: #25995C;
-  
+  background-color: #25995C;  
 }
