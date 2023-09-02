@@ -31,9 +31,9 @@ q3 = car_type.index(sl.selectbox('What type of vehicle do you drive', car_type))
 
 q4 = sl.slider('How many hours do you fly in an airplane a year?', 0, 100, format = '%.0fhr')
 
-q5 = sl.slider('How many kilometres do you drive using public transportation on average a week?', 0, 1000, format = '%.0fkm')
+q5 = sl.slider('How many kilometres do you travel using public transportation on average a week?', 0, 1000, format = '%.0fkm')
 
-q6 = sl.slider('How many of your car rides are using a carpool or a ride-sharing app?', 0, 100, format = '%.0f%%')
+q6 = sl.slider('How many of your car rides involve carpooling or ride-sharing?', 0, 100, format = '%.0f%%')
 
 if q6 > 0:
     total += ((q2/100) * vehicle_type[q3] * 2.3 * 52) / (4 * (q6/100))

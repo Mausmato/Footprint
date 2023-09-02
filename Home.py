@@ -3,6 +3,7 @@ from streamlit.components.v1 import html
 import pandas as pd
 import altair as alt
 import numpy as py
+
 sl.set_page_config(page_title='FOOTPRINT')
 sl.sidebar.title("Navigation")
 sl.sidebar.image("assets/footprint.png")
@@ -54,5 +55,6 @@ g3data = {"Location":["Denmark","UK","Finland","Malta","Sweden","Canada","Pakist
 g3data = pd.DataFrame(g3data)
 g3data = g3data.set_index("Location")
 sl.bar_chart(g3data)
+
 
 sl.subheader("SUMMARY")
