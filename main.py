@@ -1,18 +1,17 @@
 import streamlit as sl
 
+with open('style.css') as f:
+  sl.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 sl.markdown("""
 ‹style>
-.css-1wbqy5l e17vllj40 {
+.css-cio0dv.ea3mdgi1
+{
   visibility: hidden;
-  
-  
 }
-
-.css-cio0dv ea3mdgi1 {
-  
+.css-czk5ss.e16jpq800
+{
   visibility: hidden
-  
 }
 </style>
 """, unsafe_allow_html=True)
@@ -22,4 +21,3 @@ sl.button("Calculate Now")
 sl.subheader("Our Mission")
 sl.markdown("")
 
-sl.title("")
