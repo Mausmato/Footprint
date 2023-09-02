@@ -27,7 +27,7 @@ total = 0
 #transportation
 q2 = sl.slider('How many kilometres do you drive on average a week', 0, 5000, format = '%.0fkm')
 
-q3 = sl.selectbox('What type of vehicle do you drive', car_type)
+q3 = car_type.index(sl.selectbox('What type of vehicle do you drive', car_type))
 
 q4 = sl.slider('How many hours do you fly in an airplane a year?', 0, 100, format = '%.0fhr')
 
@@ -127,3 +127,5 @@ total = round(total/1000, 2)
 sl.write("Your total carbon emissions for a year would be "+str(total)+" tons.")  #in tonnes of co2 per year
 amt_of_trees = math.ceil(total/0.025)
 sl.write('To offset your carbon emissions you would need: '+str(amt_of_trees)+' trees')
+
+sl.markdown('<a href="/Dashboard" target="_self">CLICK HERE to learn more about how YOU can reduce your carbon footprint</a>', unsafe_allow_html=True)
