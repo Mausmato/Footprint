@@ -12,8 +12,6 @@ with open('style.css') as f:
 
 sl.subheader("Hello, welcome to your **DASHBOARD**.")
 
-sl.write("Three Main Factors:")
-
 # Create two columns
 left_column, right_column = sl.columns(2)
 
@@ -39,4 +37,4 @@ strategies = {
 Selected = left_column.radio("Select a CO2 reduction strategy to review:", list(strategies.keys()))
 
 if Selected:
-    left_column.write(f"**{Selected}**: {strategies[Selected]}") 
+    right_column.write(f"**{Selected}**: {strategies[Selected]}") 
