@@ -15,11 +15,11 @@ col1, col2, col3 = sl.columns(3)
 
 # Create a link in col3
 col1.header("Recommend")
-col1.write("Visit the [Recommendations] Page (http://localhost:8501/Dashboard)")
+col1.write("Visit the [Recommendations](http://localhost:8501/Dashboard) Page to view viable recomendations")
 # Create a link in col2
 col2.header("To Do")
-col2.write("Visit [ToDo](https://www.google.com)")
+col2.write("Visit [ToDo](https://www.google.com) Page to create working ToDo lists.")
 
 # Create a link in col3
 col3.header("Strategy")
-col3.write("Visit the [Strategy] Page (http://localhost:8501/Strategy)")
+col3.write("Visit the [Strategy](http://localhost:8501/Strategy) Page to view viable stratagies")
