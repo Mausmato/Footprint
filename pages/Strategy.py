@@ -37,4 +37,9 @@ strategies = {
 Selected = left_column.radio("Select a CO2 reduction strategy to review:", list(strategies.keys()))
 
 if Selected:
-    right_column.write(f"**{Selected}**: {strategies[Selected]}") 
+    right_column.write(" ")
+    right_column.write(" ")
+    right_column.write(" ")
+    right_column.write(" ")
+    right_column.write(" ")
+    right_column.write(f" **{Selected}**: {strategies[Selected]}") 
