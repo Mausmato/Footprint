@@ -3,6 +3,9 @@ import math
 from streamlit_extras.switch_page_button import switch_page
 import pickle
 
+with open('style.css') as f:
+  sl.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+
 labels = ["Never", "Rarely", "Sometimes", "Often", "Always"]
 labels3 = ['None', 'A few', 'Many', 'Almost all', 'All']
 
