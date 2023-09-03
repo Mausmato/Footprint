@@ -11,13 +11,10 @@ sl.sidebar.image("assets/footprint.png")
 
 with open('style.css') as f:
   sl.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
-  
-sl.title("Hello, welcome to FOOTPRINT.")
 
 # Create a title for your app
-sl.title('Advanced To-Do List App')
+sl.title('Welcome to the Advanced To-Do List App')
 
-# Initialize tasks in the session state
 if 'tasks' not in sl.session_state:
     sl.session_state.tasks = pd.DataFrame(columns=['Task', 'Priority', 'Due Date'])
 
