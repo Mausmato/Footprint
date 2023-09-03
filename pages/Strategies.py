@@ -38,5 +38,4 @@ if Selected:
     right_column.write(" ")
     right_column.write(" ")
     right_column.write(" ")
-    right_column.write(" ")
     right_column.write(f" **{Selected}**: {strategies[Selected]}") 
