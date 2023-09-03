@@ -66,6 +66,23 @@ if Spend > 0:
         "Solar powered electronics are interesting devices to look into",
         "Look into energy efficient home renovations"
     ]
+    sl.write("**Personalized Recommendations:**")
+    if Spend >= 0:
+        for suggestion in recommendations1:
+            sl.write(f"- {suggestion}")
+    elif Spend >= 50:
+        for suggestion in recommendations2:
+            sl.write(f"- {suggestion}")
+    elif Spend >= 100:
+        for suggestion in recommendations3:
+            sl.write(f"- {suggestion}")
+    elif Spend >= 200:
+        for suggestion in recommendations4:
+            sl.write(f"- {suggestion}")
+    elif Spend >= 500:
+        for suggestion in recommendations5:
+            sl.write(f"- {suggestion}")
+
 strategies = {
     "Energy Efficiency": "Learn how to make your home more energy-efficient.",
     "Sustainable Transportation": "Discover eco-friendly transportation options.",
