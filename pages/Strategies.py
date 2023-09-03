@@ -9,22 +9,20 @@ with open('style.css') as f:
 # sl.title("Hello, welcome to your **DASHBOARD**.")
 # sl.subheader("Three Main Factors")
 
-sl.title("Welcome to the **STRATEGY** Tab.")
+sl.title("Welcome to the **STRATEGIES** Tab.")
 
 # Create two columns
 left_column, right_column = sl.columns(2)
 
 strategies = {
-    "Energy Efficiency": "Learn how to make your home more energy-efficient.",
-    "Sustainable Transportation": "Discover eco-friendly transportation options.",
-    "Sustainable Diet": "Find tips on reducing your carbon footprint through your diet.",
-    "Eco-friendly Travel": "Explore eco-conscious travel practices and destinations.",
-    "Carbon Offsetting": "Learn about carbon offsetting and its impact.",
-    "Renewable Items": "Try utilizing reuseable items like waterbottles and containters.",
-    "Car Tuning": "Keeping your car in tune can help save gas and electricity.",
-    "Close the Windows": "When your air conditioner is running, close the windows to save energy.",
+    "Energy Efficiency": "Use more energy efficient appliances, such as making the switch from incandescent bulbs to LEDs.",
+    "Sustainable Transportation": "Using public transport such as trains and buses. Cycling more to get to nearby destinations and investing in green vehicles.",
+    "Sustainable Diet": "Buying more locally foods help reduce emissions as non-locally sourced foods emit 100x more.",
+    "Carbon Offsetting": "Planting trees is one of may ways to reach carbon neutrality and balancing out the emissions you produce.",
+    "Renewable Items": "Using renewable items such as multi-use waterbottles and purchasing items second-hand when possible.",
+    "Close the Windows": "When your air conditioner is running, close the windows to conserve energy.",
     "Composting": "Compost food items to reduce kitchen-waste.",
-    "Plant Trees": "Plant trees to help absorb CO2 and produce oxygen.",
+    "Plant Trees": "Plant trees to help absorb more CO2 and produce more oxygen.",
     "Smart Home": "Using a smart thermostat can help optimize cooling and heating.",
     "Share Resources": "Borrow and share items with neighbors and friends to reduce consumption.",
     "Appliance Optimizing": "Skip the dryer and air dry clothes to save energy.",
@@ -36,7 +34,6 @@ strategies = {
 Selected = left_column.radio("Select a CO2 reduction strategy to review:", list(strategies.keys()))
 
 if Selected:
-    right_column.write(" ")
     right_column.write(" ")
     right_column.write(" ")
     right_column.write(" ")
