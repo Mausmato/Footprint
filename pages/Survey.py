@@ -18,7 +18,7 @@ labels2 = ['Never', 'Rarely', 'Sometimes', 'Often', 'Very often']
 labels3 = ['None', 'A few', 'Many', 'Almost all', 'All']
 values = [1, 2, 3, 4, 5]
 vehicle_type = [10, 12, 40, 12, 0, 0]
-car_type = ['car', 'SUV', 'semi', 'pickup', 'electric', 'none']
+cars= ['Car', 'SUV', 'Semi', 'Pickup', 'Electric', 'None']
 
 commital = sl.slider('How committed are you to emit less Carbon Emissions? (on a scale of 1-10)', 1, 10)
 
@@ -28,13 +28,13 @@ total = 0
 
 
 #transportation
-q2 = sl.slider('How many kilometres do you drive on average a week', 0, 5000, format = '%.0fkm')
+q2 = sl.slider('How many kilometres do you travel by car on average in a week', 0, 5000, format = '%.0fkm')
 
-q3 = sl.radio('What type of vehicle do you drive', car_type)
+q3 = sl.checkbox('What type of vehicle do you use', ['Car', 'SUV', 'Semi', 'Pickup', 'Electric', 'None'])
 
 q4 = sl.slider('How many hours do you fly in an airplane a year?', 0, 100, format = '%.0fhr')
 
-q5 = sl.slider('How many kilometres do you drive using public transportation on average a week?', 0, 1000, format = '%.0fkm')
+q5 = sl.slider('How many kilometres do you travel using public transportation on average a week?', 0, 1000, format = '%.0fkm')
 
 q6 = sl.slider('How many of your car rides are using a carpool or a ride-sharing app?', 0, 100, format = '%.0f%%')
 
