@@ -15,7 +15,7 @@ sl.subheader("CO2 Emissions Reduction Recommendations")
 
 # Sidebar for user input
 sl.subheader("Please answer a quick question!")
-Spend = sl.number_input("How much money are you willing to spend anually to lower your CO2 emissions? (In $)")
+Spend = sl.slider("How much money are you willing to spend anually to lower your CO2 emissions? (In $)", 0.0, 1000.0, step=10.0)
 
 
 if Spend > 0:
