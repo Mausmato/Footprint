@@ -6,7 +6,6 @@ import numpy as py
 from streamlit_extras.switch_page_button import switch_page
 
 sl.set_page_config(page_title='FOOTPRINT')
-sl.sidebar.title("Navigation")
 sl.sidebar.image("assets/footprint.png")
 
 with open('style.css') as f:

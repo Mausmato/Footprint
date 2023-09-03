@@ -1,7 +1,5 @@
 import streamlit as sl
 
-
-sl.sidebar.title("Navigation")
 sl.sidebar.image("assets/footprint.png")
 
 with open('style.css') as f:
