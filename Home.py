@@ -7,7 +7,6 @@ from streamlit_extras.switch_page_button import switch_page
 
 sl.set_page_config(page_title='FOOTPRINT')
 sl.sidebar.image("assets/footprint.png")
-sl.sidebar.image("assets/vine.png")
 
 with open('style.css') as f:
   sl.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)

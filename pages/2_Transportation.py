@@ -20,7 +20,7 @@ cars= ['Car', 'SUV', 'Semi', 'Pickup', 'Electric', 'None']
 
 q2 = sl.slider('How many kilometres do you travel by car on average in a week', 0, 2000, format = '%.0fkm')
 
-q3 = cars.index(sl.select_slider("What type of vehicle do you use", options = cars))
+q3 = cars.index(sl.radio("What type of vehicle do you use", options = cars))
 
 q4 = sl.slider('How many hours do you fly in an airplane a year?', 0, 100, format = '%.0fhr')
 
