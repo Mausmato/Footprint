@@ -4,7 +4,7 @@ from streamlit_extras.switch_page_button import switch_page
 import pickle
 with open('style.css') as f:
   sl.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
-  
+
 labels = ["Never", "Rarely", "Sometimes", "Often", "Always"]
 
 with open('data.pkl', 'rb') as file:
@@ -12,9 +12,6 @@ with open('data.pkl', 'rb') as file:
 
 if sl.button('Previous', on_click = sl.write()):
    switch_page('Housing')
-   
-if sl.button('Next', on_click = sl.write()):
-   switch_page('Waste')
 
 q12 = sl.radio('What sort of diet do you follow', ['None', 'vegan', 'vegetarian'])
 
@@ -46,3 +43,5 @@ else:
 with open('data.pkl', 'wb') as file:
     pickle.dump(total, file)
 
+if sl.button('Next', on_click = sl.write()):
+   switch_page('Waste')

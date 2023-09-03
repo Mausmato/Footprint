@@ -2,16 +2,10 @@ import streamlit as sl
 import math
 from streamlit_extras.switch_page_button import switch_page
 import pickle
-<<<<<<< HEAD
-with open('style.css') as f:
-  sl.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
-  
-=======
 
 with open('style.css') as f:
   sl.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
->>>>>>> 06b7bfd8233d0ef41bc6a6b8b5cf273133094c85
 labels = ["Never", "Rarely", "Sometimes", "Often", "Always"]
 labels3 = ['None', 'A few', 'Many', 'Almost all', 'All']
 
@@ -21,8 +15,7 @@ with open('data.pkl', 'rb') as file:
 if sl.button('Previous', on_click = sl.write()):
    switch_page('Waste')
 
-if sl.button('Next', on_click = sl.write()):
-   switch_page('Your Results')
+
 
 q19 = labels3.index(sl.select_slider('How much of the products you shop for are second-hand or sustainable products?', options = labels3))
 
@@ -42,3 +35,6 @@ total+= 10*values19[q19]+90*values20[q20] + 20*values21[q21] + q22/1000*0.25*365
 
 with open('data.pkl', 'wb') as file:
     pickle.dump(total, file)
+    
+if sl.button('Next', on_click = sl.write()):
+   switch_page('Your Results')

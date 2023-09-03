@@ -6,10 +6,9 @@ with open('style.css') as f:
   sl.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 total = 0
 
-if sl.button('Next', on_click = sl.write()):
+if sl.button('Previous', on_click = sl.write()):
    switch_page('Survey Home')
-if sl.button('Next', on_click = sl.write()):
-   switch_page('Housing')
+
 
 with open('data.pkl', 'wb') as file:
     pickle.dump(total, file)
@@ -19,7 +18,7 @@ cars= ['Car', 'SUV', 'Semi', 'Pickup', 'Electric', 'None']
 
 q2 = sl.slider('How many kilometres do you travel by car on average in a week', 0, 5000, format = '%.0fkm')
 
-q3 = sl.checkbox("What type of vehicle do you use", ["Car", "SUV", "Semi", "Pickup", "Electric", "None"])
+q3 = sl.radio("What type of vehicle do you use", options = cars)
 
 q4 = sl.slider('How many hours do you fly in an airplane a year?', 0, 100, format = '%.0fhr')
 
@@ -35,3 +34,6 @@ else:
 total += 9 * q4
 
 total += (q5/100) * 2 * 52
+
+if sl.button('Next', on_click = sl.write()):
+   switch_page('Housing')
