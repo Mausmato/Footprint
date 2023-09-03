@@ -47,6 +47,13 @@ else:
 
 with open('data.pkl', 'wb') as file:
     pickle.dump(total, file)
+    pickle.dump(q12, file)
+    pickle.dump(q13, file)
+    pickle.dump(q14, file)
+    pickle.dump(q15, file)
+    pickle.dump(q16, file)
+
+
 
 if sl.button('Next', on_click = sl.write()):
    switch_page('Waste')

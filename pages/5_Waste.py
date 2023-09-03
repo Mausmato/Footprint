@@ -28,6 +28,9 @@ total += 0.315*q17*365+q18*0.03*182.5
 
 with open('data.pkl', 'wb') as file:
     pickle.dump(total, file)
+    pickle.dump(q17, file)
+    pickle.dump(q18, file)
+
   
 if sl.button('Next', on_click = sl.write()):
    switch_page('Shopping & Consumption')

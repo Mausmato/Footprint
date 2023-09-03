@@ -45,6 +45,12 @@ if q10 == 'yes':
 
 with open('data.pkl', 'wb') as file:
     pickle.dump(total, file)
+    pickle.dump(q7, file)
+    pickle.dump(q8, file)
+    pickle.dump(q9, file)
+    pickle.dump(q10, file)
+    pickle.dump(q11, file)
+
    
 if sl.button('Next', on_click = sl.write()):
    switch_page('Diet')

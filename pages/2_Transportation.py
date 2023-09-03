@@ -41,6 +41,12 @@ total += (q5/100) * 2 * 52
 
 with open('data.pkl', 'wb') as file:
     pickle.dump(total, file)
+    pickle.dump(q2, file)
+    pickle.dump(q3, file)
+    pickle.dump(q4, file)
+    pickle.dump(q5, file)
+    pickle.dump(q6, file)
+
 
 
 if sl.button('Next', on_click = sl.write()):

@@ -24,6 +24,8 @@ sl.title('Your RESULTS')
 sl.write("Your total carbon emissions for a year would be "+str(total)+" tons.")  #in tonnes of co2 per year
 sl.write('To offset your carbon emissions you would need: '+str(amt_of_trees)+' trees')
 
+with open('data.pkl', 'wb') as file:
+    pickle.dump(total, file)
 
 if sl.button('CLICK HERE to learn more about how YOU can reduce your carbon footprint', on_click = sl.write()):
    switch_page('Dashboard')
