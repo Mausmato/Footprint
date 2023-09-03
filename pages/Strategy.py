@@ -10,7 +10,7 @@ with open('style.css') as f:
 # sl.title("Hello, welcome to your **DASHBOARD**.")
 # sl.subheader("Three Main Factors")
 
-sl.subheader("Hello, welcome to your **DASHBOARD**.")
+sl.title("Welcome to the **STRATAGY** Tab.")
 
 # Create two columns
 left_column, right_column = sl.columns(2)
