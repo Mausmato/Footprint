@@ -3,6 +3,7 @@ from streamlit.components.v1 import html
 import pandas as pd
 import altair as alt
 import numpy as py
+from streamlit_extras.switch_page_button import switch_page
 
 sl.set_page_config(page_title='FOOTPRINT')
 sl.sidebar.title("Navigation")
@@ -21,7 +22,9 @@ def open_page(url):
     html(open_script)
     
 
-sl.markdown('<a href="/Survey" target="_self">**CALCULATE NOW**</a>', unsafe_allow_html=True)
+if sl.button('**CALCULATE NOW**', on_click = sl.write()):
+   switch_page('Survey')
+# sl.markdown('<a href="/Survey" target="_self">**CALCULATE NOW**</a>', unsafe_allow_html=True)
 sl.markdown("Click here to track your **FOOTPRINT** with our curated survey.")
 sl.subheader("Our Mission")
 sl.markdown("  Here at **FOOTPRINT** we strive to make an eco-friendly environment that is both accessible and practical. We have created a platform where users can track and calculate their **carbon footprints** to see exactly how much of an impact they have on our lovley planet. After all, a little goes a long way.")
