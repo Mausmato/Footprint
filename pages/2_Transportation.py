@@ -10,8 +10,7 @@ if sl.button('Previous', on_click = sl.write()):
    switch_page('Survey Home')
 
 
-with open('data.pkl', 'wb') as file:
-    pickle.dump(total, file)
+
 
 vehicle_type = [10, 12, 40, 12, 0, 0]
 cars= ['Car', 'SUV', 'Semi', 'Pickup', 'Electric', 'None']
@@ -36,6 +35,9 @@ total += 9 * q4
 total += (q5/100) * 2 * 52
 
 sl.write(total)
+
+with open('data.pkl', 'wb') as file:
+    pickle.dump(total, file)
 
 if sl.button('Next', on_click = sl.write()):
    switch_page('Housing')
