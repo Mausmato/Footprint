@@ -56,6 +56,6 @@ sl.write("The Best and Worst Environmental Performance Index (EPI) and where Can
 g3data = {"Location":["Denmark","UK","Finland","Malta","Sweden","Canada","Pakistan","Bangladesh","Vietnam","Myanmar","India"],"EPI Rating":[77.9,77.7,76.5,75.2,72.7,50,24.6,23.1,20.1,19.4,18.9]}
 g3data = pd.DataFrame(g3data)
 g3data = g3data.set_index("Location")
-sl.altair_chart(g3data)
+sl.bar_chart(g3data)
 sl.subheader("SUMMARY")
 sl.write("Much like other **first-world countries**, Canada is **on par** with a majority of the world when it comes to **green** action. Canada is not too far above average, but far from below it. It seems that Canada generally follows the trends that the rest of world does and though Canada comes just **50th in the world** when it comes to their **Environmental Performance Index (EPI)**, their yearly carbon emissions for the average person living in Canada is **on the decline.**")

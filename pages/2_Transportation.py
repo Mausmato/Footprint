@@ -3,6 +3,8 @@ import math
 import pickle
 from streamlit_extras.switch_page_button import switch_page
 
+sl.sidebar.image("assets/footprint.png")
+
 sl.progress(0, text='Completed: 0/5')
 
 with open('style.css') as f:
