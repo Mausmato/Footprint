@@ -3,7 +3,7 @@ import streamlit as sl
 sl.sidebar.title("Navigation")
 sl.sidebar.image("assets/footprint.png")
 
-with open('styles.css') as f:
+with open('style.css') as f:
   sl.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
   
 sl.title("Hello, welcome to your **DASHBOARD**.")
