@@ -2,6 +2,9 @@ import streamlit as sl
 import math
 from streamlit_extras.switch_page_button import switch_page
 import pickle
+
+sl.progress(20, text='Completed: 1/5')
+
 with open('style.css') as f:
   sl.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
@@ -14,6 +17,7 @@ with open('data.pkl', 'rb') as file:
 if sl.button('Previous', on_click = sl.write()):
    switch_page('Transportation')
    
+
 
 q7 = sl.slider('What is the square footage of your home', 0, 10000, format = '%.0fsq')
 
@@ -40,7 +44,5 @@ if q10 == 'yes':
 with open('data.pkl', 'wb') as file:
     pickle.dump(total, file)
    
-sl.write(total)
-
 if sl.button('Next', on_click = sl.write()):
    switch_page('Diet')

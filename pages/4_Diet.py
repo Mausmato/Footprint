@@ -2,6 +2,9 @@ import streamlit as sl
 import math
 from streamlit_extras.switch_page_button import switch_page
 import pickle
+
+sl.progress(40, text = 'Completed: 2/5')
+
 with open('style.css') as f:
   sl.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
@@ -42,8 +45,6 @@ else:
 
 with open('data.pkl', 'wb') as file:
     pickle.dump(total, file)
-
-sl.write(total)
 
 if sl.button('Next', on_click = sl.write()):
    switch_page('Waste')

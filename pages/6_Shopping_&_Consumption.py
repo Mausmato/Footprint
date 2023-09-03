@@ -3,6 +3,8 @@ import math
 from streamlit_extras.switch_page_button import switch_page
 import pickle
 
+sl.progress(80, text = 'Completed: 4/5')
+
 with open('style.css') as f:
   sl.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
@@ -35,8 +37,6 @@ total+= 10*values19[q19]+90*values20[q20] + 20*values21[q21] + q22/1000*0.25*365
 
 with open('data.pkl', 'wb') as file:
     pickle.dump(total, file)
-
-sl.write(total)
   
 if sl.button('Next', on_click = sl.write()):
    switch_page('Your Results')
