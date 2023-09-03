@@ -1,4 +1,3 @@
 # RythmHacks Footprint Website
 
-
 # 
