@@ -3,6 +3,8 @@ import math
 from streamlit_extras.switch_page_button import switch_page
 import pickle
 
+sl.sidebar.image("assets/footprint.png")
+
 with open('style.css') as f:
   sl.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
