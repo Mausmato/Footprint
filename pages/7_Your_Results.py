@@ -25,6 +25,6 @@ with open('data.pkl', 'wb') as file:
     pickle.dump(total, file)
 
 if sl.button('CLICK HERE to learn more about how YOU can reduce your carbon footprint', on_click = sl.write()):
-   switch_page('Dashboard')
+   switch_page('Recommend')
 
 
