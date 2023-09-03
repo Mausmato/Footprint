@@ -1,4 +1,5 @@
 import streamlit as sl
+import Survey
 
 sl.sidebar.title("Navigation")
 sl.sidebar.image("assets/footprint.png")
