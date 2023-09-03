@@ -20,7 +20,7 @@ if sl.button('Previous', on_click = sl.write()):
 vehicle_type = [10, 12, 40, 12, 0, 0]
 cars= ['Car', 'SUV', 'Semi', 'Pickup', 'Electric', 'None']
 
-q2 = sl.slider('How many kilometres do you travel by car on average in a week', 0, 2000, format = '%.0fkm')
+q2 = sl.slider('How many kilometres do you travel by car on average in a week',0,2000,format = '%.0fkm')
 
 q3 = cars.index(sl.radio("What type of vehicle do you use", options = cars))
 
