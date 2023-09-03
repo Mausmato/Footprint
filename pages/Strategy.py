@@ -10,9 +10,12 @@ with open('style.css') as f:
 # sl.title("Hello, welcome to your **DASHBOARD**.")
 # sl.subheader("Three Main Factors")
 
-sl.subheader("EHello, welcome to your **DASHBOARD**.")
+sl.subheader("Hello, welcome to your **DASHBOARD**.")
 
 sl.write("Three Main Factors:")
+
+# Create two columns
+left_column, right_column = sl.columns(2)
 
 strategies = {
     "Energy Efficiency": "Learn how to make your home more energy-efficient.",
@@ -33,7 +36,7 @@ strategies = {
     "Renewable Energy": "Use things like solar power to produce energy."  
 }
 
-Selected = sl.radio("Select a CO2 reduction strategy to review:", list(strategies.keys()))
+Selected = left_column.radio("Select a CO2 reduction strategy to review:", list(strategies.keys()))
 
 if Selected:
-    sl.write(f"**{Selected}**: {strategies[Selected]}") 
+    left_column.write(f"**{Selected}**: {strategies[Selected]}") 
