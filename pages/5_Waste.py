@@ -4,7 +4,7 @@ from streamlit_extras.switch_page_button import switch_page
 import pickle
 with open('style.css') as f:
   sl.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
-  
+
 labels = ["Never", "Rarely", "Sometimes", "Often", "Always"]
 
 with open('data.pkl', 'rb') as file:
@@ -13,8 +13,7 @@ with open('data.pkl', 'rb') as file:
 if sl.button('Previous', on_click = sl.write()):
    switch_page('Diet')
    
-if sl.button('Next', on_click = sl.write()):
-   switch_page('Shopping & Consumption')
+
 
 q17 = sl.slider('How much waste do you produce a day? ',0, 30,format="%.0flbs") #average is 5 lbs per person
 
@@ -24,3 +23,8 @@ total += 0.315*q17*365+q18*0.03*182.5
 
 with open('data.pkl', 'wb') as file:
     pickle.dump(total, file)
+
+sl.write(total)
+  
+if sl.button('Next', on_click = sl.write()):
+   switch_page('Shopping & Consumption')
