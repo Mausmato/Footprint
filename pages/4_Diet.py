@@ -48,9 +48,11 @@ else:
 with open('data.pkl', 'wb') as file:
     pickle.dump(total, file)
     pickle.dump(q12, file)
-    pickle.dump(q13, file)
-    pickle.dump(q14, file)
-    pickle.dump(q15, file)
+    if q12 == "None":
+        pickle.dump(q13, file)
+        pickle.dump(q14, file)
+    elif q12 == 'vegetarian':
+        pickle.dump(q15, file)
     pickle.dump(q16, file)
 
 
