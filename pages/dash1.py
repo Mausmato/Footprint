@@ -1,24 +1,25 @@
-import streamlit as st
+import streamlit as sl
 
-st.sidebar.title("Navigation")
-st.sidebar.image("assets/footprint.png")
+sl.sidebar.title("Navigation")
+sl.sidebar.image("assets/footprint.png")
 
 with open('style.css') as f:
-    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+    sl.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+    
+sl.title("Hello, welcome to your **DASHBOARD**.")
 
-st.title("Hello, welcome to your **DASHBOARD**.")
-st.subheader("Three Main Factors")
-col1, col2, col3 = st.columns(3)
+sl.subheader("Three Main Factors")
+col1, col2, col3 = sl.columns(3)
 
 # Insert HTML content in col1
 
 # Create a link in col3
-col1.header("Recommendations")
-col1.write("Visit the [Recommendations] Page (http://localhost:8501/Dashboard)")
+col1.header("Recommend")
+col1.write("Visit the [Recommendations](http://localhost:8501/Dashboard) Page to view viable recomendations")
 # Create a link in col2
 col2.header("To Do")
-col2.write("Visit [ToDo](https://www.google.com)")
+col2.write("Visit [ToDo](https://www.google.com) Page to create working ToDo lists.")
 
 # Create a link in col3
 col3.header("Strategy")
-col3.write("Visit the [Strategy] Page (http://localhost:8501/Strategy)")
+col3.write("Visit the [Strategy](http://localhost:8501/Strategy) Page to view viable stratagies")
