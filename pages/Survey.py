@@ -30,7 +30,7 @@ total = 0
 #transportation
 q2 = sl.slider('How many kilometres do you travel by car on average in a week', 0, 5000, format = '%.0fkm')
 
-q3 = sl.checkbox('What type of vehicle do you use', ['Car', 'SUV', 'Semi', 'Pickup', 'Electric', 'None'])
+q3 = sl.checkbox("What type of vehicle do you use", ["Car", "SUV", "Semi", "Pickup", "Electric", "None"])
 
 q4 = sl.slider('How many hours do you fly in an airplane a year?', 0, 100, format = '%.0fhr')
 
