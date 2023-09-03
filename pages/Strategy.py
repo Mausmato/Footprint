@@ -7,8 +7,12 @@ sl.sidebar.image("assets/footprint.png")
 with open('style.css') as f:
     sl.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
-sl.title("Hello, welcome to your **DASHBOARD**.")
-sl.subheader("Three Main Factors")
+# sl.title("Hello, welcome to your **DASHBOARD**.")
+# sl.subheader("Three Main Factors")
+
+sl.subheader("EHello, welcome to your **DASHBOARD**.")
+
+sl.write("Three Main Factors:")
 
 strategies = {
     "Energy Efficiency": "Learn how to make your home more energy-efficient.",
@@ -28,3 +32,8 @@ strategies = {
     "Rain-Barrels": "Utilize rain barrels to catch and store spare water.",
     "Renewable Energy": "Use things like solar power to produce energy."  
 }
+
+Selected = sl.radio("Select a CO2 reduction strategy to review:", list(strategies.keys()))
+
+if Selected:
+    sl.write(f"**{Selected}**: {strategies[Selected]}") 
