@@ -2,6 +2,8 @@ import streamlit as sl
 import math
 from streamlit_extras.switch_page_button import switch_page
 import pickle
+with open('style.css') as f:
+  sl.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 with open('data.pkl', 'rb') as file:
     total = pickle.load(file)
@@ -17,6 +19,6 @@ sl.write('To offset your carbon emissions you would need: '+str(amt_of_trees)+' 
 
 
 if sl.button('CLICK HERE to learn more about how YOU can reduce your carbon footprint', on_click = sl.write()):
-   switch_page('Shopping & Consumption')
+   switch_page('Dashboard')
 
 
