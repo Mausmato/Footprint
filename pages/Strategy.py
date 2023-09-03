@@ -3,8 +3,12 @@ import streamlit as sl
 sl.sidebar.title("Navigation")
 sl.sidebar.image("assets/footprint.png")
 
+
 with open('style.css') as f:
-  sl.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+    sl.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+
+sl.title("Hello, welcome to your **DASHBOARD**.")
+sl.subheader("Three Main Factors")
 
 strategies = {
     "Energy Efficiency": "Learn how to make your home more energy-efficient.",

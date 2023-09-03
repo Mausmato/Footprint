@@ -1,6 +1,4 @@
 import streamlit as sl
-import streamlit_book
-import matplotlib
 import numpy as np
 import math
 
