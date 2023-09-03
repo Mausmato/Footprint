@@ -23,7 +23,7 @@ def open_page(url):
     
 
 if sl.button('**CALCULATE NOW**', on_click = sl.write()):
-   switch_page('Survey')
+   switch_page('Survey Home')
 # sl.markdown('<a href="/Survey" target="_self">**CALCULATE NOW**</a>', unsafe_allow_html=True)
 sl.markdown("Click here to track your **FOOTPRINT** with our curated survey.")
 sl.subheader("Our Mission")
